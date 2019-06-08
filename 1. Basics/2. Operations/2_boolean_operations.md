@@ -17,7 +17,7 @@ is_dm_being_mean = False
 > BTW: truthy and falsey aren't strictly "real terms", but the meaning is clear and I think the words are funny to read.
 
 # Truthy-Falsey Logic
-So math has -+/* operations, and booleans have their own set of operations:
+Math has -+/* operations, and booleans have their own set of operations:
 - and
 - or
 - ==
@@ -43,4 +43,9 @@ _a_ will only be True if the values of _b_ and _c_ are the same. Otherwise _a_ i
 ## not
 <code>a = not b</code>
 
-"not" just switches the value of whatever boolean it precedes. If _b_ is False, then _a_ will be True, and vice-versa.
+"not" just switches the value of whatever boolean it precedes. If _b_ is False, then _a_ will be assigned True, and vice-versa. 
+
+You will also see the negation operator used in this form: <code>a = b != c</code>
+
+
+> Do exercise 2 before moving on to the next lesson!

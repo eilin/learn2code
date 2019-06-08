@@ -27,4 +27,4 @@ Operations are resolved in the same order as real math (PEMDAS). You can also us
 my_payout = (quest_reward + total_loot_found) / party_size
 </code>
 
-> Do exercise 0 before moving on to the next lesson!
+> Do exercise 1 before moving on to the next lesson!
