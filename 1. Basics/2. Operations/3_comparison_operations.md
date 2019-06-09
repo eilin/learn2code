@@ -6,11 +6,19 @@ Just two more operators to cover:
 
 Again, just like in math you can use these to compare numbers:
 
-<code>potion_price = 30<br>wallet = 50<br>can_afford = wallet > potion_price or wallet == potion_price</code>
+```
+potion_price = 30
+
+wallet = 50
+
+can_afford = wallet > potion_price or wallet == potion_price
+```
 
 In fact, there's an easier way to write "greater than or equal to". We can rewrite the above example as:
 
-<code>can_afford = wallet >= potion_price</code>
+```
+can_afford = wallet >= potion_price
+```
 
 > The same goes for "less than or equal to", just use: <code><=</code>
 

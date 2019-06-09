@@ -8,11 +8,11 @@ Like numbers and strings, booleans are another data type that variables can hold
 
 In python, the "truthy" boolean is the "True" keyword and the "falsey" boolean is the "False" keyword.
 
-<code>
+```
 is_quest_awesome = True
 
 is_dm_being_mean = False
-</code>
+```
 
 > BTW: truthy and falsey aren't strictly "real terms", but the meaning is clear and I think the words are funny to read.
 
