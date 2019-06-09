@@ -1,17 +1,21 @@
 # If, Else
 
+> Starting with this chapter and for the following lessons and exercises, it is recommended to start writing code in a script instead of in the interactive console.
+
 Sometimes we need our program to be able to behave differently based on the current state of its variables. To achieve this, we have what are called _conditional_ statements.
 
 For example, when we encounter a monster we may want to fight or run depending on our current health. If our health is high, we fight. Else, we run. We can implement this as:
 
 ```
 if my_health >= 50:
+  # I have plenty of health
   print('fight!')
 else:
+  # My health is low
   print('run!')
   ```
 
-> Starting with this example and for the following lessons and exercises, it is recommended to start writing code in a script instead of in the interactive console.
+> **Woah nelly!** Why are there **hashtags** in my code? Anything after a pound symbol is a _comment_. Comments are ignored by the interpreter, and we can use them to write for ourselves what code is doing or why it's doing it. Expect to see comments being used in following examples where I want to show code happening but don't actually want to write it out.
 
 Note that not every 'if' statement needs an 'else', but every 'else' needs an 'if'. Here's an example of an 'if' without an 'else':
 
@@ -43,10 +47,12 @@ Imagine you want to want to sneak by a guard to steal some gold, or failing that
 
 ```
 if stealth_check > guard_perception:
+  # snuck past, steal all of it!
   my_gold = my_gold + treasure
 else:
   if deception_check > guard_wisdom:
-    my_gold + my_gold + treasure / 10
+    # bluffed my way in, grab a handful
+    my_gold = my_gold + treasure / 10
   else:
     print('run for it!')
 ```
