@@ -30,7 +30,7 @@ These are valid names:
 - my_var2
 
 We usually try to be descriptive when naming variables. A better name for <code>vp</code> in the example above would be <code>victory_phrase</code> since that's what it is.
-> In python, the standard convention for multi-word variable names is to write it in lowercase with _ replacing spaces. While this is valid code <br><code>PiValue = 3.14</code>, it's best to follow a language's standard for consistency.
+> In python, the standard convention for multi-word variable names is to write it in lowercase with _ replacing spaces. While this is valid code <code>PiValue = 3.14</code> it's best to follow a language's standard for consistency.
 
 ## Conclusion
 We've seen variables, how to name them, how to assign them a value, and 2 types of data already: numbers and strings.
