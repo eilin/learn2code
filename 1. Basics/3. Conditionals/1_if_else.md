@@ -5,11 +5,11 @@ Sometimes we need our program to be able to behave differently based on the curr
 For example, when we encounter a monster we may want to fight or run depending on our current health. If our health is high, we fight. Else, we run. We can implement this as:
 
 <code>
-if my_health >= 50:<br>
-&nbsp;&nbsp;print('fight!')<br>
-else:<br>
+if my_health >= 50:  
+&nbsp;&nbsp;print('fight!')  
+else:  
 &nbsp;&nbsp;print('run!')
-</code>
+</code>  
 
 > Starting with this example and for the following lessons and exercises, it is recommended to start writing code in a script instead of in the interactive console.
 
@@ -18,7 +18,7 @@ Note that not every 'if' statement needs an 'else', but every 'else' needs an 'i
 <code>
 grog_dmg = strength + weapon_bonus
 
-if is_raging:<br>
+if is_raging:  
 &nbsp;&nbsp;grog_dmg = grog_dmg + rage_bonus
 
 monster_health = monster_health - grog_dmg
@@ -42,11 +42,11 @@ The same rules apply as before, just one indentation level deeper than the previ
 Imagine you want to want to sneak by a guard to steal some gold, or failing that to try to talk your way past him and swipe a fraction of the loot, or failing all that to run away.
 
 <code>
-if stealth_check > guard_perception:<br>
-&nbsp;&nbsp;my_gold = my_gold + treasure<br>
-else:<br>
-&nbsp;&nbsp;if deception_check > guard_wisdom:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;my_gold + my_gold + treasure / 10<br>
-&nbsp;&nbsp;else:<br>
+if stealth_check > guard_perception:  
+&nbsp;&nbsp;my_gold = my_gold + treasure  
+else:  
+&nbsp;&nbsp;if deception_check > guard_wisdom:  
+&nbsp;&nbsp;&nbsp;&nbsp;my_gold + my_gold + treasure / 10  
+&nbsp;&nbsp;else:  
 &nbsp;&nbsp;&nbsp;&nbsp;print('run for it!')
 </code>
