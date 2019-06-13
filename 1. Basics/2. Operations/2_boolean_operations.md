@@ -47,5 +47,7 @@ _a_ will only be True if the values of _b_ and _c_ are the same. Otherwise _a_ i
 
 You will also see the negation operator used in this form: <code>a = b != c</code>
 
+You will need to use <code>!=</code> when comparing numbers.
+
 
 > Do exercise 2 before moving on to the next lesson!
