@@ -66,4 +66,9 @@ while level < 10:
 
 There are multiple ways to do exercise 2, such as writing an "if" check for every level in the table. 
 
-Once you have it working, see if you can complete it using only 4 "if"s
+> Challenge: Once you have it working, see if you can complete it using only 4 "if"s
+
+## Exercise 3
+You've gotten this far - great!
+
+Now use the methods you just completed to figure out how many D6s to roll for a level L rogue's sneak attack (you decide the level), then roll the dice and see what your how much damage your sneak attack deals.
