@@ -68,6 +68,8 @@ There are multiple ways to do exercise 2, such as writing an "if" check for ever
 
 > Challenge: Once you have it working, see if you can complete it using only 4 "if"s
 
+> Challenge: Try to think of how to do it without any "or"s
+
 ## Exercise 3
 You've gotten this far - great!
 
