@@ -89,7 +89,8 @@ print(b.race)
 ```
 
 Take a guess before running it for yourself.
-Did you expect it to print the following?
+
+Did you expect it would print the following?
 ```
 Human
 Human
@@ -97,6 +98,16 @@ Human
 Gnome
 Gnome
 Gnome
+```
+
+But it actually prints this!
+```
+Human
+Human
+Human
+Human
+Gnome
+Human
 ```
 What's actually going on is that when you access a member of an object and it only exists as a class member, a instance member is created on the object with a default value of the class member. So modifying ```a.race``` is actually modifying the instance member on ```a``` instead of the class member.
 

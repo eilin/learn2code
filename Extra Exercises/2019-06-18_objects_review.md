@@ -54,5 +54,5 @@ def battle(char1, char2):
         print(char2.name + " wins!")
 
 
-# 4.) Create 2 characters, arm one with your custom weapon, and have them battle it out!
+# 4.) Create 2 characters, arm one (or both) with your custom weapon, and have them battle it out!
 ```
