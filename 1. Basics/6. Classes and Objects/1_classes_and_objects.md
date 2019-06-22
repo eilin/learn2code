@@ -12,7 +12,52 @@ Every object of the same class will have the same variable names, but each varia
 
 Confused? Looking at a real example will be much clearer.
 
-## Defining a Class
+## The Simplest Example
+Here's our class (blueprint) for a Person, creating an object of that class, and changing the name of that object.
+```
+class Person:
+    def __init__(self):
+        self.name = "no name"
+
+me = Person()
+
+me.name = "Percival"
+```
+
+So there's a few things to explain here.
+
+### me = Person()
+This line is creating an object of the Person class. You invoke the class name like it is a method, and the return value is a new object (or an instance) of that class.
+
+### def \_\_init__(self):
+This is defining a special method called <code>\_\_init__</code> , short for "initialize". Whenever an object is created, <code>\_\_init__</code> is invoked automatically by the computer.
+
+> A method that is called automatically during object creation is generally referred to as a _Constructor_ in programming terms.
+
+A constructor is usually used to set the initial values of the variables of the newly created object. In our example, the variable <code>name</code> is set to "no name".
+
+
+### self
+When we create an object in our example, <code>me = Person()</code>, we don't pass any arguments to the method. However, we see that the definition of <code>\_\_init__</code> takes an argument called "self" - what's going on?
+
+> Alright, it's about to get a little weird
+
+Methods defined on a class are available to all object instances of that class. When a class method is called, the computer needs some way to know which instance the method needs to act on. 
+
+So all methods defined on a class must include <code>self</code> as the first parameter, and it is a reference to the object that is invoking the method.
+
+This reference allows the computer to correctly apply the class method's effects to the object that is invoking the method.
+
+> You may need to ask your instructor to draw out an example of what's going on.
+
+### The . syntax
+To access a variable or method of an object, you use a period between the object and the variable.
+
+<code>me.name</code> accesses the variable <code>name</code> of the Person object assigned to the variable <code>me</code>.
+
+> BTW we call the variables of an object "**members**"
+
+## Another Example
 
 Instead of organizing our characters like this:
 
@@ -28,68 +73,39 @@ scanlan_health = "60"
 
 We'll define a Character class with variables for "name", "dnd_class", and "health":
 
-> By convention, while variable names should be "snake_case", class names should be "CamelCase"
+> By convention, while member/method names should be "snake_case", class names should be "CamelCase"
 
 ```
-class Character:
-  name = ''
-  dnd_class = ''
-  health = 0
+class DndCharacter:
+    def __init__(self):
+        self.name = ''
+        self.dnd_class = ''
+        self.health = 0
 ```
 
 > Notice how <code>class</code> is the keyword used to define the class, so I needed to use "dnd_class" to avoid a conflict with the keyword.
 
-When we create a Character object, the default values for the variables will be the same as what we defined in the class (in this case, empty strings and 0).
-
-> BTW we call the variables of a class/object **members**
-
-Lets create an object for our character and set the members accordingly.
+Lets create an object for our characters and set the members accordingly.
 
 ```
-# Create an object by calling the class like a method
-me = Character()
-
-# Access a object's member using the .
+me = DndCharacter()
 me.name = "Derpachev"
 me.dnd_class = "Gunslinger"
 me.health = 80
-```
 
-Now imagine you have a function that needs many variables of a character as parameters. Instead of passing in all those variables separately, you can just pass in one object!
+scanlan = DndCharacter()
+scanlan.name = "Scanlan"
+scanlan.dnd_class = "Bard"
+scanlan.health = 60
+```
+Now when we need to use a method that uses these characters, instead of needing to pass in 6 variables, I can just pass in my character objects.
 
 ```
 # Before
-result = func(health, name, dnd_class, strength, armor, dex, gold, weapon_bonus)
+result = do_something(my_name, my_class, my_health, scanlan_name, scanlan_class, scanlan_health)
 
 # After
-result = func(character)
+result = do_something(me, scanlan)
 ```
 
-## Members and Methods
-
-As said before, the variables of a class are called **members**. Similiarly, any functions defined on a class are called **methods**.
-
-Let's add a method to our Character class to introduce themself:
-
-```
-class Character:
-  name = ''
-  dnd_class = ''
-  health = 0
-
-  def greet(self):
-    print("I am " + self.name + " the " + self.dnd_class)
-
-```
-
-We define a function like before, using **def**, but what is this "self" parameter?
-
-> The following is an oversimplification, but it's true enough.
-
-Objects store members and their values, but methods are stored in the Class. This is because while objects may have unique members, their methods will all be the same since they come from the same class.
-
-So when you call a method on an object, the interpreter looks up the method on the class of the object.
-
-In order to act on the members of the calling object, a **reference** to the object gets passed as the first argument to any method defined in a class - this reference is the "self" variable. If this reference was not passed in, the method in the class would have no idea which object is running it.
-
-> Whew! That was a lot. Make sure that makes sense to you.
+> The more parameters a method takes the more likely you'll make a mistake when passing in arguments. In general, more concise code is simpler to read and write.

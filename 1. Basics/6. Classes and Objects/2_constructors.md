@@ -1,20 +1,38 @@
 # Constructors
 
-There are some special methods that you can define in a class, one of which is the **constructor**.
+As said before, the variables of a class are called **members**. Similiarly, any functions defined on a class are called **methods**.
 
-The constructor method name is ```__init__```
-
-> That's 2 underscores before and after.
-
-The constructor is called on an object when it is created, and is useful for initializing members. You can define any number of parameters, but like any other method the **self** reference is the first argument.
+From the previous lesson, we learned that a 
+special method called ```__init___``` serves as the constructor for the class, and that ```self``` must be the first parameter of the method. We can also add more parameters to the constructor to use during the initialization of new objects.
 
 ```
-class Character:
-  name = ''
-
-  def __init__(self, name):
-    self.name = name
-
+class DndCharacter:
+    def __init__(self, name, dnd_class, health):
+        self.name = name
+        self.dnd_class = dnd_class
+        self.health = health
+```
+We can also add logic in the constructor. Say we want to make sure that ```health``` is never initialized to be less than 0
+```
+class DndCharacter:
+    def __init__(self, name, dnd_class, health):
+        self.name = name
+        self.dnd_class = dnd_class
+        if health < 0:
+            self.health = 0
+        else:
+            self.health = health
+```
+With this constructor defined, instead of writing 3 additional lines:
+```
+me = DndCharacter()
+me.name = "Derpachev"
+me.dnd_class = "Gunslinger"
+me.health = 80
+```
+We can just write:
+```
+me = DndCharacter("Derpachev", "Gunslinger", 80)
 ```
 
-> Note that you can name "self" anything since it's just another variable name, but for convention's sake (again) you should keep it as "self".
+> It's less typing and less reading. Win-win.
