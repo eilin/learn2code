@@ -1,6 +1,6 @@
 # 2019-06-18 Objects Review
 
-Copy the code below (all of it), read through, and complete the 3 missing parts. Each part is marked by a comment and is numbered.
+Copy the code below (all of it), read through, and complete the 4 missing parts. Each part is marked by a comment and is numbered.
 **Ask questions** if you have any.
 
 **READ ALL COMMENTS** especially if the comment is directly above a method - those usually explain what is expected from the method.
