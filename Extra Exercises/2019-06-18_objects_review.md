@@ -36,7 +36,7 @@ class Character:
         print(target.name + "'s health is now " + str(target.health))
 
     # returns a Boolean
-    def isAlive(self):
+    def is_alive(self):
         #
         # 3.) complete me!
         #
