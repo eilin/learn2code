@@ -1,6 +1,6 @@
 # Encapsulation
 
-We've basically covered this already in our introduction to Classes and Objects - with the motivation of being able to group "character" related variables together, we created a Character class to treat a collection of related variables as a single unit to describe a particular character.
+We've basically covered this already in our introduction to Classes and Objects - with the motivation of being able to group "character" related variables together, we created a Character class to treat a collection of related variables as a single unit.
 Additionally in the Character class we defined methods that act upon the members of the object, such as ```take_damage()```, ```is_alive()```, and ```greet()```.
 
 The basic definition of encapsulation is __to bundle related data and behaviors together__.
@@ -27,7 +27,7 @@ class Character {
 
 Character c = new Character();
 c.name = "Lord Zymeth"; // Ok
-c.health = 100; // Error!
+c.health = 100; // Error! "private" makes this member inaccessible outside of the class.
 c.setHealth(100); // Ok
 ```
 
@@ -47,11 +47,12 @@ class Battle:
     ...
     
 ```
-Now when the next programmer comes along to use your code (or yourself, a week later), it's hard to see which methods are intended for use outside the class.
+Now when the next programmer comes along to use your code, it's hard to see which methods are intended for use outside the class.
+> Any code you wrote more than a few days ago is basically code written by a stranger - you might be the "next programmer" who comes along lol.
 
 In Java, you'd mark ```fight``` as public and everything else as private. Then it's very clear which methods shouldn't be touched from outside the class.
 
-In Python there's no explicit "private" modifier, but there is a convention you can follow: any members/methods that start with "_" is understood to be "private".
+In Python there's no explicit "private" modifier, but there is a well-understood convention to follow: any members/methods that start with "_" is meant to be private.
 
 ```
 class Battle:
@@ -63,7 +64,7 @@ class Battle:
         ...
     ...
 ```
-Now the next programmer to read your code will think "Ah, I shouldn't call ```_determine_next_action``` myself - otherwise I risk messing up the state of the Battle object".
+Now the next programmer to read your code will think "Ah, I shouldn't call ```_determine_next_action``` myself - otherwise I risk using it wrong and messing up the state of the Battle object".
 
 ## Conclusion
 
