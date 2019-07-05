@@ -1,4 +1,4 @@
-# Exercise 1: Cleric Heal PLZ kthxbai
+# Exercise 1.1: Cleric Heal PLZ kthxbai
 
 The party is heavily wounded! Find who needs healing the most (has lowest health) and assign them to the 'heal_first' variable.
 
